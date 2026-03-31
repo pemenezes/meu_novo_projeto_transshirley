@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trans Shirley - 15 anos de excelência em transporte e logística nacional. Frota moderna e profissionais qualificados.">
+    <meta name="keywords" content="transporte, logística, trucking, fretes, Brasil, Osasco, Brasília">
+    <meta name="author" content="Trans Shirley Transportes">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Trans Shirley - Transporte e Logística Nacional">
+    <meta property="og:description" content="Empresa com 15 anos de experiência em transporte nacional. Frota moderna e profissionais qualificados.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.transshirley.com.br">
+    
+    <title>Trans Shirley - Transporte e Logística Nacional</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC2626',
+                        secondary: '#1F2937',
+                        accent: '#F59E0B',
+                        background: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">TS</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-bold text-lg text-secondary">Trans Shirley</span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-primary font-medium">Home</a>
+                    <a href="sobre.html" class="text-gray-600 hover:text-primary transition">Sobre</a>
+                    <a href="servicos.html" class="text-gray-600 hover:text-primary transition">Serviços</a>
+                    <a href="cobertura.html" class="text-gray-600 hover:text-primary transition">Cobertura</a>
+                    <a href="contato.html" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-red-700 transition font-medium">
+                        Contato
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button 
+                    x-data="{ open: false }"
+                    @click="open = !open"
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+                >
+                    <i x-show="!open" data-lucide="menu" class="w-6 h-6"></i>
+                    <i x-show="open" data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-data="{ open: false }" x-show="open" x-transition class="md:hidden pb-4">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="px-4 py-2 text-primary font-medium bg-red-50 rounded-lg">Home</a>
+                    <a href="sobre.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Sobre</a>
+                    <a href="servicos.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Serviços</a>
+                    <a href="cobertura.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Cobertura</a>
+                    <a href="contato.html" class="px-4 py-2 text-primary font-medium bg-red-50 rounded-lg">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Transporte com <span class="text-primary">Excelência</span> e <span class="text-accent">Qualidade</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8">
+                        há 15 anos conectando o Brasil com eficiência, segurança e compromisso. 
+                        Sua carga em boas mãos.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contato.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition inline-flex items-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            Solicite um Orçamento
+                        </a>
+                        <a href="servicos.html" class="border-2 border-white hover:bg-white hover:text-secondary text-white px-8 py-3 rounded-lg font-semibold transition inline-flex items-center gap-2">
+                            <i data-lucide="truck" class="w-5 h-5"></i>
+                            Nossos Serviços
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img 
+                        src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop" 
+                        alt="Caminhões Trans Shirley na estrada"
+                        class="rounded-2xl shadow-2xl"
+                        loading="eager"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">15+</div>
+                    <div class="text-gray-600">Anos de Experiência</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">27</div>
+                    <div class="text-gray-600">Estados Atendidos</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">100%</div>
+                    <div class="text-gray-600">Território Nacional</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">24h</div>
+                    <div class="text-gray-600">Suporte Operacional</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="py-16 md:py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop" 
+                        alt="Equipe Trans Shirley"
+                        class="rounded-2xl shadow-xl"
+                        loading="lazy"
+                    >
+                </div>
+                <div>
+                    <span class="text-primary font-semibold uppercase tracking-wider text-sm">Sobre Nós</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-2 mb-6">
+                        Compromisso com a Excelência desde 2010
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A <strong>Trans Shirley</strong> é uma empresa voltada para a prestação de serviços de transporte, 
+                        desenvolvendo, implantando e operando soluções completas em logística. Há 15 anos no mercado, 
+                        trabalhamos com eficiência e dedicação, cobrindo todo o território nacional.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nossa frota e condutores estão continuamente em reciclagem, garantindo veículos em perfeito 
+                        estado e profissionais com o mais alto padrão de conhecimento.
+                    </p>
+                    <a href="sobre.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        Conheça nossa história
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold uppercase tracking-wider text-sm">Nossos Serviços</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-2">
+                    Soluções Completas em Transporte
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-background rounded-2xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-7 h-7 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Transporte Nacional</h3>
+                    <p class="text-gray-600">
+                        Cobertura completa do território brasileiro com rotas otimizadas e prazos garantidos para sua carga.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-background rounded-2xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="package" class="w-7 h-7 text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Logística Integrada</h3>
+                    <p class="text-gray-600">
+                        Soluções completas de armazenagem, distribuição e gestão da cadeia logística.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-background rounded-2xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Carga Segura</h3>
+                    <p class="text-gray-600">
+                        Monitoramento 24h, seguros abrangentes e protocolos rigorosos de segurança.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="servicos.html" class="inline-flex items-center gap-2 bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition">
+                    Ver Todos os Serviços
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 md:py-20 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Nossos Valores</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                    O que nos Move
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                <div class="p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="hard-hat" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Trabalho</h3>
+                </div>
+                <div class="p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="heart-handshake" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Respeito</h3>
+                </div>
+                <div class="p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="handshake" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Confiança</h3>
+                </div>
+                <div class="p-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Qualidade</h3>
+                </div>
+                <div class="p-4 col-span-2 md:col-span-1">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="eye" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Transparência</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Pronto para transportar sua carga com segurança?
+            </h2>
+            <p class="text-xl text-red-100 mb-8">
+                Entre em contato conosco e receba um orçamento personalizado para sua necessidade.
+            </p>
+            <a href="contato.html" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                Fale Conosco Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Logo & About -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">TS</span>
+                        </div>
+                        <span class="font-bold text-xl">Trans Shirley</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        há 15 anos oferecendo soluções completas em transporte e logística nacional com excelência e compromisso.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="sobre.html" class="text-gray-400 hover:text-white transition">Sobre</a></li>
+                        <li><a href="servicos.html" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+                        <li><a href="cobertura.html" class="text-gray-400 hover:text-white transition">Cobertura</a></li>
+                        <li><a href="contato.html" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                            <span>Av. Pref. Hirant Sanazar, 1308<br>Jd. Umuarama - Osasco - SP</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5 flex-shrink-0"></i>
+                            <span>(11) 3685-4715</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-5 h-5 flex-shrink-0"></i>
+                            <span>contato@transshirley.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Trans Shirley Transportes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

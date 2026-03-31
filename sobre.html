@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história da Trans Shirley - 15 anos de excelência em transporte nacional com missão, visão e valores sólidos.">
+    <title>Sobre Nós - Trans Shirley Transportes</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC2626',
+                        secondary: '#1F2937',
+                        accent: '#F59E0B',
+                        background: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">TS</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-bold text-lg text-secondary">Trans Shirley</span>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="sobre.html" class="text-primary font-medium">Sobre</a>
+                    <a href="servicos.html" class="text-gray-600 hover:text-primary transition">Serviços</a>
+                    <a href="cobertura.html" class="text-gray-600 hover:text-primary transition">Cobertura</a>
+                    <a href="contato.html" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-red-700 transition font-medium">
+                        Contato
+                    </a>
+                </div>
+                
+                <button 
+                    x-data="{ open: false }"
+                    @click="open = !open"
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+                >
+                    <i x-show="!open" data-lucide="menu" class="w-6 h-6"></i>
+                    <i x-show="open" data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div x-data="{ open: false }" x-show="open" x-transition class="md:hidden pb-4">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Home</a>
+                    <a href="sobre.html" class="px-4 py-2 text-primary font-medium bg-red-50 rounded-lg">Sobre</a>
+                    <a href="servicos.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Serviços</a>
+                    <a href="cobertura.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Cobertura</a>
+                    <a href="contato.html" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero-gradient text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Sobre Nós</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Conheça a história, missão e valores que fazem da Trans Shirley referência em transporte nacional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- História -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=600&h=450&fit=crop" 
+                        alt="Transporte rodoviário no Brasil"
+                        class="rounded-2xl shadow-xl"
+                        loading="lazy"
+                    >
+                </div>
+                <div>
+                    <span class="text-primary font-semibold uppercase tracking-wider text-sm">Nossa História</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-2 mb-6">
+                        15 Anos Conectando o Brasil
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Fundada em 2010, a <strong>Trans Shirley</strong> nasceu com o propósito de oferecer 
+                        soluções completas em transporte e logística para o mercado brasileiro. Desde então, 
+                        crescemos de forma consistente, expandindo nossa atuação para todos os 27 estados do Brasil.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Nossa empresa é voltada para a prestação de serviços, desenvolvendo, implantando e 
+                        operando soluções completas em transportes, sempre atendendo às necessidades específicas 
+                        de cada cliente.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Com políticas rígidas, planos e estratégias bem definidas, garantimos um serviço de 
+                        confiabilidade e excelente qualidade, sempre nos aperfeiçoando frente às demais 
+                        empresas do ramo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão, Visão, Valores -->
+    <section class="py-16 md:py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary">Missão, Visão e Valores</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Missão -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="target" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary text-center mb-4">Missão</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Atender com respeito, eficiência e qualidade nossos clientes, oferecendo serviços 
+                        com excelência e soluções inovadoras que atendam todas as suas necessidades.
+                    </p>
+                </div>
+                
+                <!-- Visão -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="eye" class="w-8 h-8 text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary text-center mb-4">Visão</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Ser reconhecida como a melhor provedora de serviços de transportes e logística 
+                        em nível nacional, destacando-nos pela qualidade e confiabilidade.
+                    </p>
+                </div>
+                
+                <!-- Valores -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-secondary">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="gem" class="w-8 h-8 text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary text-center mb-4">Valores</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                            <span>Trabalho</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                            <span>Respeito</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                            <span>Confiança</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                            <span>Qualidade</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                            <span>Transparência</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold uppercase tracking-wider text-sm">Nossos Diferenciais</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-2">
+                    Por que Escolher a Trans Shirley?
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="refresh-cw" class="w-10 h-10 text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-2">Frota em Reciclagem</h3>
+                    <p class="text-gray-600 text-sm">
+                        Veículos continuamente atualizados para máxima eficiência e segurança.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-10 h-10 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-2">Equipe Qualificada</h3>
+                    <p class="text-gray-600 text-sm">
+                        Profissionais em constante reciclagem com alto padrão de conhecimento.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="map-pin" class="w-10 h-10 text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-2">Cobertura Nacional</h3>
+                    <p class="text-gray-600 text-sm">
+                        Atendemos todos os 27 estados brasileiros com rotas otimizadas.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="shield" class="w-10 h-10 text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-secondary mb-2">Segurança Total</h3>
+                    <p class="text-gray-600 text-sm">
+                        Políticas rígidas e seguros abrangentes para sua carga.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Conheça a Trans Shirley pessoalmente
+            </h2>
+            <p class="text-xl text-red-100 mb-8">
+                Entre em contato e descubra como podemos ajudar no seu transporte.
+            </p>
+            <a href="contato.html" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+                Fale Conosco
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">TS</span>
+                        </div>
+                        <span class="font-bold text-xl">Trans Shirley</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        há 15 anos oferecendo soluções completas em transporte e logística nacional.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="sobre.html" class="text-gray-400 hover:text-white transition">Sobre</a></li>
+                        <li><a href="servicos.html" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+                        <li><a href="cobertura.html" class="text-gray-400 hover:text-white transition">Cobertura</a></li>
+                        <li><a href="contato.html" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                            <span>Av. Pref. Hirant Sanazar, 1308<br>Jd. Umuarama - Osasco - SP</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5 flex-shrink-0"></i>
+                            <span>(11) 3685-4715</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Trans Shirley Transportes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
