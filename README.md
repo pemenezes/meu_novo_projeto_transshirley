@@ -1,5 +1,8 @@
 # 🚛 Trans Shirley - Site Institucional
 
+<img width="1546" height="743" alt="image" src="https://github.com/user-attachments/assets/039beb18-cb48-4a8b-a12d-36fb2bfff32d" />
+
+
 Site institucional moderno e responsivo para a empresa de transporte e logística Trans Shirley. Desenvolvido com HTML5, Tailwind CSS, Alpine.js e ícones Lucide, o projeto apresenta a história, serviços, cobertura nacional e canais de contato da empresa.
 
 ## 📋 Visão Geral
